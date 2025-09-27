@@ -1,17 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header'
-import NavBar from './components/NavBar'
+import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import NavBar from "./components/NavBar";
+import Inicio from "./pages/Inicio";
+import Carrito from "./pages/Carrito";
+import Carta from "./pages/Carta";
+import Contacto from "./pages/Contacto";
+import Nosotros from "./pages/Nosotros";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/carta" element={<Carta />} />
+        <Route path="/carrito" element={<Carrito />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
