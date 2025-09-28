@@ -1,0 +1,22 @@
+.Card{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    border-radius: 1em;
+    border: 1px solid #000;
+
+    margin: 1em;
+
+    padding: 1em;
+}
+.Card img{
+    height: 25%;
+    width:fit-content;
+}
+.Card p{
+    text-align: center;
+}
