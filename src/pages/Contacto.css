@@ -1,0 +1,34 @@
+.Titulo,
+.Texto,
+.subtituloComoLlegar {
+  text-align: center;
+}
+
+.Texto {
+  text-align: center;
+}
+
+.contenedorFormularios {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10%;
+  margin-top: 40px;
+}
+
+.contenedorIzq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.contenedorDer {
+  max-width: 500px;
+  width: 100%;
+}
+
+.contenedorComoLlegar {
+  padding: 2%;
+}
