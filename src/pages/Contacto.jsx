@@ -3,7 +3,7 @@ import style from "./Contacto.module.css";
 import Card from "../components/Card/Card";
 import CardComoLlegar from "../components/Card/CardComoLlegar.jsx";
 import "../components/Formulario/formulario";
-import Formulario from "../components/Formulario/formulario.jsx";
+import Formulario from "../components/Formulario/formulario.jsx"; /*Funciona formulario.jsx por más que el archivo este en mayuscula, si se pone en mayuscula tira error*/
 
 export default function Contacto() {
   return (

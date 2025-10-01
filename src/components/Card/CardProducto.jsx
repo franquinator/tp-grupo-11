@@ -10,8 +10,8 @@ export default function CardProducto( { producto } ){
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text text-body-secondary">{producto.descripcion}</p>
                 <h5 className="card-title">${producto.precio}</h5>
-                <div className="d-grid gap-2 col-6 mx-auto">
-                    <button className="btn btn-dark" type="button">+ Agregar al carrito</button>
+                <div className={`d-grid gap-2 col-6 mx-auto ${style.divBtn}`}>
+                    <button className={`btn btn-dark btn-sm ${style.btnCardCarrito}`} type="button">+ Agregar al Carrito</button>
                 </div>
             </div>
         </div>

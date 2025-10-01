@@ -1,46 +1,46 @@
 import React from "react";
-import "./Formulario.css";
+import style from "./Formulario.module.css";
 
-export default function formulario() {
+export default function Formulario() {
   return (
-    <div className="form-card">
+    <div className={style.formCard}>
       <h2>Hacer una Reserva</h2>
-      <form className="formulario">
-        <div className="form-row">
-          <div className="form-group">
+      <form className={style.formulario}>
+        <div className={style.formRow}>
+          <div className={style.formGroup}>
             <label>Nombre completo *</label>
-            <input type="text" placeholder="Tu nombre" required />
+            <input className={style.inputForm} type="text" placeholder="Tu nombre" required />
           </div>
-          <div className="form-group">
+          <div className={style.formGroup}>
             <label>Email *</label>
-            <input type="email" placeholder="tu@email.com" required />
+            <input className={style.inputForm} type="email" placeholder="tu@email.com" required />
           </div>
         </div>
 
-        <div className="form-row">
-          <div className="form-group">
+        <div className={style.formRow}>
+          <div className={style.formGroup}>
             <label>Fecha de la reserva *</label>
-            <input type="date" required />
+            <input className={style.inputForm} type="date" required />
           </div>
-          <div className="form-group">
+          <div className={style.formGroup}>
             <label>Hora de la reserva *</label>
-            <input type="time" required />
+            <input className={style.inputForm} type="time" required />
           </div>
         </div>
 
-        <div className="form-group full-width">
+        <div className={`${style.formGroup} ${style.fullWidth}`}>
           <label>Mensaje / Comentarios *</label>
-          <textarea
+          <textarea className={style.textareaForm}
             placeholder="Cuéntanos sobre tu reserva: número de personas, ocasión especial, preferencias alimentarias, etc."
             required
           />
         </div>
 
-        <button type="submit" className="btn-enviar">
+        <button type="submit" className={style.btnEnviar}>
           Enviar Reserva
         </button>
 
-        <p className="nota">
+        <p className={style.nota}>
           * Campos obligatorios. Te confirmaremos tu reserva por email o
           teléfono.
         </p>

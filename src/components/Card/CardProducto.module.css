@@ -2,7 +2,7 @@
     width: 100%;
     height: 300px;/*mismo tamaño para las imagenes en card*/
     overflow: hidden; /*Sirve para el tamaño de la imagen aumenta el tamaño del div se mantiene igual*/
-    border-radius: 8px 8px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .imgCard {
@@ -14,10 +14,31 @@
     aspect-ratio: 1 /1; /*Vuelco la imagen cuadrada para que todas queden iguales*/
 }
 
-.imgCard:hover {
+.imgCard:hover{
     transform: scale(1.05);
 }
 
 .cardProd{
-    margin: 10px;
+    margin: 5px 0px 5px 0px;
+}
+
+
+.cardProd:hover{
+    box-shadow: 0px 2px 5px rgba(0,0,0, .2);
+}
+
+.divBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnCardCarrito{
+    font-size: 18px;
+    margin-top: 10px;
+    white-space: nowrap;
+    border-radius: 16px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 700px;
 }

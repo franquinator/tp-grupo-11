@@ -1,4 +1,4 @@
-.form-card {
+.formCard {
   background: #fff;
   padding: 20px 30px;
   max-width: 600px;
@@ -7,7 +7,7 @@
   border: 1px solid #000;
 }
 
-.form-card h2 {
+.formCard h2 {
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -18,25 +18,25 @@
   gap: 20px;
 }
 
-.form-row {
+.formRow {
   display: flex;
   gap: 20px;
 }
 
-.form-group {
+.formGroup {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.form-group label {
+.formGroup label {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 14px;
 }
 
-input,
-textarea {
+.inputForm,
+.textareaForm {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -44,16 +44,16 @@ textarea {
   outline: none;
 }
 
-textarea {
+.textareaForm {
   resize: vertical;
   min-height: 80px;
 }
 
-.full-width {
+.fullWidth {
   width: 100%;
 }
 
-.btn-enviar {
+.btnEnviar {
   background: #000;
   color: #fff;
   border: none;
