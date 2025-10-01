@@ -1,0 +1,23 @@
+.divImgCard{
+    width: 100%;
+    height: 300px;/*mismo tamaño para las imagenes en card*/
+    overflow: hidden; /*Sirve para el tamaño de la imagen aumenta el tamaño del div se mantiene igual*/
+    border-radius: 8px 8px 0 0;
+}
+
+.imgCard {
+    width: 100%;
+    height: 100%;
+    transition: .4s ease; /*4segundo velocidad continua*/
+    object-fit: cover; /*evitar que se vea alargadeo o aplastado*/
+    object-position: center;
+    aspect-ratio: 1 /1; /*Vuelco la imagen cuadrada para que todas queden iguales*/
+}
+
+.imgCard:hover {
+    transform: scale(1.05);
+}
+
+.cardProd{
+    margin: 10px;
+}
