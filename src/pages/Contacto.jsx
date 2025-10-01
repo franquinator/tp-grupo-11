@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contacto.css";
+import style from "./Contacto.module.css";
 import Card from "../components/Card/Card";
 import CardComoLlegar from "../components/Card/CardComoLlegar.jsx";
 import "../components/Formulario/formulario";
@@ -8,14 +8,14 @@ import Formulario from "../components/Formulario/formulario.jsx";
 export default function Contacto() {
   return (
     <section>
-      <h1 className="Titulo">Contacto y Reservas</h1>
-      <p className="Texto">
+      <h1 className={style.titulo}>Contacto y Reservas</h1>
+      <p className={style.texto}>
         ¿Tienes alguna pregunta o quieres hacer una reserva? No dudes en
         contactarnos. ¡Estaremos encantados de atenderte!
       </p>
 
-      <div className="contenedorFormularios">
-        <div className="contenedorIzq">
+      <div className={style.contenedorFormularios}>
+        <div className={style.contenedorIzq}>
           <Card
             titulo={"Direccion"}
             icono={"src/assets/geo.png"}
@@ -37,12 +37,12 @@ export default function Contacto() {
             texto={"Lun - Sab: 7:00AM - 10:00PM"}
           />
         </div>
-        <div className="contenedorDer">
+        <div className={style.contenedorDer}>
           <Formulario />
         </div>
       </div>
-      <div className="contenedorComoLlegar">
-        <h2 className="subtituloComoLlegar">¿Como llegar?</h2>
+      <div className={style.contenedorComoLlegar}>
+        <h2 className={style.subtituloComoLlegar}>¿Como llegar?</h2>
         <CardComoLlegar
           icono={"src/assets/geo.png"}
           texto={

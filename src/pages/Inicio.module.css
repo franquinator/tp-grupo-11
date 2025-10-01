@@ -1,9 +1,9 @@
-.flexContainer{
+.FlexContainer{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
-section img {
+Section img {
     width: 50%;
     height: auto;
     display: block;
@@ -11,11 +11,11 @@ section img {
     max-width: 100%;
     max-height: 100%;
 }
-.primerSeccion{
+.PrimerSeccion{
     display: flex;
     background-color: beige;
 }
-.tercerSeccion{
+.TercerSeccion{
     background-color: black;
     color: white;
 }

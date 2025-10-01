@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
+import style from "./NavBar.module.css";
 
 function NavBar() {
   return (
-    <nav>
+    <nav className={style.nav}>
       <div className="divIzquierdo">
         <i
           className="bi bi-cup-hot" /* cuando pongamos modo oscuro se usa este: <i class="bi bi-cup-hot-fill"></i> */

@@ -1,5 +1,4 @@
 import "./App.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import NavBar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
 import Carrito from "./pages/Carrito";

@@ -1,22 +1,19 @@
-.Card {
+.cardComoLlegar {
   flex: 1;
 
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 
   border-radius: 1em;
   border: 1px solid #000;
-
+  background-color: #eeeeee;
   margin: 1em;
-
   padding: 1em;
 }
-.Card img {
+
+.cardComoLlegar img {
   height: 25%;
   width: fit-content;
-}
-.Card p {
-  text-align: center;
 }

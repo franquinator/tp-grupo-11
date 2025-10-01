@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,13 +10,13 @@ nav {
   padding-bottom: 10px;
 }
 
-nav div {
+.nav div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-nav ul {
+.nav ul {
   color: black;
   text-decoration: none;
   display: flex;
