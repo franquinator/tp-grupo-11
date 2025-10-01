@@ -42,3 +42,11 @@
     width: 100%;
     max-width: 700px;
 }
+
+.textCard{
+    text-align: left;
+}
+
+.textDescripcion{
+    font-size: 15px;
+}
