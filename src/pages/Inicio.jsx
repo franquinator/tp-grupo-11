@@ -1,6 +1,7 @@
 import Card from "../components/Card/Card";
 import ButtonLink from "../components/ButtonLink.jsx";
 import style from "./Inicio.module.css"
+import styleButton from "../components/ButtonLink.module.css";
 
 export default function Inicio() {
   return <>
@@ -9,8 +10,8 @@ export default function Inicio() {
         <h1>Bienvenidos a</h1>
         <h1>Luna & Granos Café</h1>
         <p>Disfruta de los mejores cafés artesanales, pasteles frescos y un ambiente acogedor perfecto para compartir momentos especiales.</p>
-        <ButtonLink pagina={"/carta"} texto={"Ver nuestra carta"}/>
-        <ButtonLink pagina={"/contacto"} texto={"Hacer reserva"}/>
+        <ButtonLink pagina={"/carta"} texto={"Ver nuestra carta"} className={styleButton.botonInicio}/>
+        <ButtonLink pagina={"/contacto"} texto={"Hacer reserva"} className={styleButton.botonInicio}/>
       </div>
       <img src="src/assets/imagenes/imagenInicio.jfif" alt="" />
     </section>

@@ -1,0 +1,32 @@
+.botonInicio{
+  all: unset; 
+  background-color: #000;      /* color de fondo negro */
+  color: #fff;                 /* texto blanco */
+  border: none ;                /* sin borde */
+  padding: 12px 24px;          /* tamaño mediano */
+  border-radius: 25px;         /* bordes más redondeados */
+  font-size: 16px;             /* tamaño de letra mediano */
+  cursor: pointer;             /* cursor de mano */
+  display: inline-block;       /* que no ocupe todo el ancho */
+  margin: 5px ;           /* separa los botones y los centra */
+  text-align: center;
+  transition: background 0.3s;
+  display: inline-block;     /* Evitar que el Link afecte el layout */
+  min-width: 150px
+  
+
+}
+
+.contenedorBotones {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que los botones se bajen si no entran */
+  gap: 16px;             /* Espacio entre los botones */
+  justify-content: center; /* Opcional: centra los botones horizontalmente */
+  margin-top: 20px;      /* Espacio arriba si lo necesitás */
+}
+
+
+
+.botonMediano:hover {
+  background-color: #333;      /* cambia a gris oscuro al pasar el mouse */
+}
