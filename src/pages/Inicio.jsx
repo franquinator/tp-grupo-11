@@ -5,16 +5,18 @@ import style from "./Inicio.module.css"
 export default function Inicio() {
   return <>
     <section className={style.PrimerSeccion}>
-      <div>
-        <h1>Bienvenidos a</h1>
-        <h1>Luna & Granos Café</h1>
+      <div className={style.TextoPrimerSeccion}>
+        <h1>Bienvenidos a <br/> <span className={style.LetraNaranja}>Luna & Granos Café</span></h1>
         <p>Disfruta de los mejores cafés artesanales, pasteles frescos y un ambiente acogedor perfecto para compartir momentos especiales.</p>
         <ButtonLink pagina={"/carta"} texto={"Ver nuestra carta"}/>
         <ButtonLink pagina={"/contacto"} texto={"Hacer reserva"}/>
       </div>
-      <img src="src/assets/imagenes/imagenInicio.jfif" alt="" />
+      <div className={style.ImagenPrimerSeccion}>
+        <img src="src/assets/imagenes/imagenInicio.jfif" alt="" />
+      </div>
+      
     </section>
-    <section>
+    <section className={style.SegundaSeccion}>
       <h2>¿Por qué elegirnos?</h2>
       <p>En Luna & Granos Café nos apasiona ofrecer la mejor experiencia cafetera, combinando calidad, comodidad y un servicio excepcional.</p>
       <div className={style.FlexContainer}>
@@ -24,10 +26,14 @@ export default function Inicio() {
       </div>
     </section>
     <section className={style.TercerSeccion}>
-      <h2>¿Listo para una experiencia única?</h2>
-      <p>Ven y descubre nuestros sabores únicos, desde cafés especiales hasta deliciosos pasteles artesanales. Tu mesa te está esperando.</p>
-      <ButtonLink pagina={"/carta"} texto={"Ver nuestra carta"}/>
-      <ButtonLink pagina={"/contacto"} texto={"Hacer reserva"}/>
+      <div>
+        <h2>¿Listo para una experiencia única?</h2>
+        <p>Ven y descubre nuestros sabores únicos, desde cafés especiales hasta deliciosos pasteles artesanales. Tu mesa te está esperando.</p>
+      </div>
+      <div>
+        <ButtonLink pagina={"/carta"} texto={"Ver nuestra carta"}/>
+        <ButtonLink pagina={"/contacto"} texto={"Hacer reserva"}/>
+      </div>
     </section>
   </>;
 }
