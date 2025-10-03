@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Facundo Torres",
+    "role": "Fundador y Maestro Tostador",
+    "description": "Con más de 15 años de experiencia en el mundo del café, Facundo fundó Luna & Granos con la visión de crear un espacio único.",
+    "imagen": ""
+  },
+  {
+    "name": "Franco Iannone",
+    "role": "Gerente de Operaciones",
+    "description": "Franco coordina todas nuestras operaciones diarias y mantiene la calidad excepcional que nos caracteriza.",
+    "imagen": ""
+  },
+  {
+    "name": "Facundo Chavez",
+    "role": "Barista Principal",
+    "description": "Experto en técnicas de extracción y latte art, Facundo se asegura de que cada bebida sea una obra de arte.",
+    "imagen": ""
+  },
+  {
+    "name": "Lucas Crusvar",
+    "role": "Encargado de Marketing y Comunicación",
+    "description": "Se ocupa de promocionar la marca, crear campañas en redes sociales, organizar eventos y mantener la imagen de Luna & Granos frente al público.",
+    "imagen": ""
+  },
+  {
+    "name": "Ariel Valenzuela",
+    "role": "Especialista en Calidad de Café",
+    "description": "Responsable de probar y evaluar los granos, controlar la consistencia en las bebidas y asegurar que los estándares de sabor y aroma se mantengan en cada lote.",
+    "imagen": "../src/assets/imagenes/20221101_115416.jpg"
+  }
+]

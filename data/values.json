@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "Heart",
+    "title": "Pasión por el Café",
+    "description": "Cada taza que servimos está preparada con amor y dedicación, utilizando métodos artesanales que resaltan los sabores únicos de cada grano."
+  },
+  {
+    "icon": "Users",
+    "title": "Comunidad",
+    "description": "Creemos en ser más que una cafetería: somos un punto de encuentro donde se forjan amistades y se comparten momentos especiales."
+  },
+  {
+    "icon": "Leaf",
+    "title": "Sostenibilidad",
+    "description": "Trabajamos directamente con productores locales y practicamos el comercio justo, cuidando tanto el planeta como a nuestros agricultores."
+  },
+  {
+    "icon": "Award",
+    "title": "Calidad Premium",
+    "description": "Seleccionamos cuidadosamente cada grano y tostamos en pequeños lotes para garantizar la máxima frescura y sabor en cada taza."
+  }
+]
