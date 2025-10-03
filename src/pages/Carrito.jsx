@@ -1,6 +1,8 @@
 import React from "react";
 import style from './Carrito.module.css'
 import ButtonLink from "../components/ButtonLink.jsx";
+import CardCarrito from "../components/Card/CardCarrito.jsx";
+import productos from '../../data/productos.json'
 
 export default function Carrito() {
   return (
@@ -16,6 +18,7 @@ export default function Carrito() {
           <ButtonLink pagina={"/carta"} texto={"Ver Carta"}/>
         </div>
       </div>
+      <CardCarrito producto={productos[1]}></CardCarrito>
     </>
   );
 }
