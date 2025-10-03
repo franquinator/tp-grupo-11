@@ -1,4 +1,5 @@
 import style from "./CardProducto.module.css";
+import {agregarAlCarrito} from "/src/manejoDeCarrito.js"
 
 export default function CardProducto({ producto }) {
   return (
@@ -22,6 +23,7 @@ export default function CardProducto({ producto }) {
           <button
             className={`btn btn-dark btn-sm ${style.btnCardCarrito}`}
             type="button"
+            onClick={() => agregarAlCarrito(producto)}
           >
             + Agregar al Carrito
           </button>
