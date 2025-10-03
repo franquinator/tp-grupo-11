@@ -3,7 +3,7 @@
         "id": 1,
         "nombre":"Café Americano",
         "descripcion":"Café negro fuerte y aromático, perfecto para comenzar el día",
-        "precio":"2.500",
+        "precio":"2500",
         "tipo":"cafe",
         "imagen":"https://images.unsplash.com/photo-1711142919985-07b38590ec80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBhbWVyaWNhbm98ZW58MXx8fHwxNzU4Njk2MDg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral "
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "nombre":"Cappuccino",
         "descripcion":"Espresso con leche vaporizada y espuma de leche",
-        "precio":"3.200",
+        "precio":"3200",
         "tipo":"cafe",
         "imagen":"https://images.unsplash.com/photo-1708430651927-20e2e1f1e8f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXBwdWNjaW5vJTIwY29mZmVlfGVufDF8fHx8MTc1ODczODcxNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "nombre":"Latte Vainilla",
         "descripcion":"Café con leche y un toque dulce de vainilla",
-        "precio":"3.800",
+        "precio":"3800",
         "tipo":"cafe",
         "imagen":"https://images.unsplash.com/photo-1683122925249-8b15d807db4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2YW5pbGxhJTIwbGF0dGUlMjBjb2ZmZWV8ZW58MXx8fHwxNzU4NjczMTA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "nombre":"Mocha Chocolate",
         "descripcion":"Deliciosa combinación de café, chocolate y leche",
-        "precio":"4.200",
+        "precio":"4200",
         "tipo":"cafe",
         "imagen": "https://images.unsplash.com/photo-1604298545771-6aafca512943?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2NoYSUyMGNob2NvbGF0ZSUyMGNvZmZlZXxlbnwxfHx8fDE3NTg3NDcxNjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "nombre":"Té Verde Jazmín",
         "descripcion":"Té verde aromático con flores de jazmín",
-        "precio":"2.800",
+        "precio":"2800",
         "tipo":"té",
         "imagen": "https://images.unsplash.com/photo-1672842700943-b9916abd19fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqYXNtaW5lJTIwZ3JlZW4lMjB0ZWF8ZW58MXx8fHwxNzU4NzQ3MTY5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"    
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "nombre":"Chai Latte",
         "descripcion":"Mezcla de especias tradicionales con leche cremosa",
-        "precio":"3.500",
+        "precio":"3500",
         "tipo":"té",
         "imagen":"https://images.unsplash.com/photo-1651789276450-2ba99bf5f270?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFpJTIwbGF0dGUlMjB0ZWF8ZW58MXx8fHwxNzU4NzQ3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "nombre":"Croissant de Almendras",
         "descripcion":"Croissant hojaldrado relleno con crema de almendras",
-        "precio":"2.200",
+        "precio":"2200",
         "tipo":"pasteleria",
         "imagen":"https://images.unsplash.com/photo-1649542181703-33cc4f373b28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbG1vbmQlMjBjcm9pc3NhbnQlMjBwYXN0cnl8ZW58MXx8fHwxNzU4NzQ3MTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "nombre":"Cheesecake de Frutos Rojos",
         "descripcion":"Cremoso cheesecake con mermelada de frutos del bosque",
-        "precio":"4.500",
+        "precio":"4500",
         "tipo":"pasteleria",
         "imagen":"https://images.unsplash.com/photo-1734987408480-c2916b5386bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZXJyeSUyMGNoZWVzZWNha2V8ZW58MXx8fHwxNzU4NzQ3MTkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "nombre":"Muffin de Arándanos",
         "descripcion":"Esponjoso muffin con arándanos frescos",
-        "precio":"2.800",
+        "precio":"2800",
         "tipo":"pasteleria",
         "imagen":"https://images.unsplash.com/photo-1607958996333-41aef7caefaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibHVlYmVycnklMjBtdWZmaW58ZW58MXx8fHwxNzU4NzA1MTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "nombre":"Sándwich Veggie",
         "descripcion":"Pan integral con verduras frescas, palta y queso",
-        "precio":"3.800",
+        "precio":"3800",
         "tipo":"comida",
         "imagen":"https://images.unsplash.com/photo-1639390187674-45bc11587d2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2ZWdldGFyaWFuJTIwc2FuZHdpY2h8ZW58MXx8fHwxNzU4NzIzMzM0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     }

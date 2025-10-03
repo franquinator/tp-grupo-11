@@ -45,7 +45,7 @@ export default function CardCarrito({ producto }) {
         <div className={`text-end ${style.precioCardCarrito}`}>
           <button className="btn btn-sm text-danger" onClick={borrarElemento}><i className="bi bi-trash"></i></button>
           <p>${producto.precio} c/u</p>
-          <p><strong>${producto.precio}</strong></p>
+          <p><strong>${producto.precio * cantidad}</strong></p>
         </div>
       </div>
     </div>

@@ -6,9 +6,11 @@ import {obtenerCarrito,borrarCarrito} from "/src/manejoDeCarrito.js"
 
 export default function Carrito() {
   const carrito = obtenerCarrito();
+  const cantProductos = carrito.reduce((n, prod) => {return n + prod.cantidad}, 0);
   return (
     <>
     <div>
+      {/*Sin Productos*/}
       { carrito.length === 0 ? (
       <div id="Carrito sin productos">
         <div className={`d-flex justify-content-center align-items-center ${style.divLogoCompra}`}>
@@ -22,9 +24,10 @@ export default function Carrito() {
         </div>
       </div>
       
-    
       ) : (
       <div>
+        {/*Con Productos*/}
+
         {carrito.map((p) => (<CardCarrito key={p.id} producto={p}/>))}
         <div className="d-grid gap-2 col-6 mx-auto">
           <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={borrarCarrito}>Vaciar Carrito</button>
