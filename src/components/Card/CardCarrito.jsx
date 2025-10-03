@@ -1,9 +1,20 @@
 import React, { useState } from 'react'
 import style from './CardCarrito.module.css'
+import {agregarAlCarrito,borrarDelCarrito, disminuirCantidad} from "/src/manejoDeCarrito.js"
 
 export default function CardCarrito({ producto }) {
-  const [cantidad, setCantidad] = useState(1);
+  const [cantidad, setCantidad] = useState(producto.cantidad);
   const esBotonActivado = () => {cantidad === 1 ? "true" : "false"}
+  const disminuirCantidadProducto = () =>{
+    if(cantidad > 1){
+      setCantidad(cantidad - 1);
+      disminuirCantidad(producto);
+    }
+  }
+  const borrarElemento = () =>{
+    borrarDelCarrito(producto);
+  }
+  //const cantidad = producto.cantidad;
   return (
     <>
     <div className={`card d-flex ${style.cardPrincipal}`}>
@@ -24,15 +35,15 @@ export default function CardCarrito({ producto }) {
           <p>{producto.descripcion}</p>
 
           <div className={style.contadorCarrito}>
-            <button className={`btn btn-sm ${cantidad === 1 ? "btn-smbtn-outline-secondary" : "btn-outline-secondary"} `} onClick={() => setCantidad(cantidad - 1)}>-</button>
+            <button  className={`btn btn-sm ${cantidad === 1 ? "btn-smbtn-outline-secondary" : "btn-outline-secondary"} `} onClick={disminuirCantidadProducto}>-</button>
             <span>{cantidad}</span>
-            <button className="btn btn-sm btn-outline-secondary" onClick={() => setCantidad(cantidad +1)}>+</button>
+            <button className="btn btn-sm btn-outline-secondary" onClick={() => {setCantidad(cantidad +1);agregarAlCarrito(producto)}}>+</button>
           </div>
         </div>
 
         {/* Precio y eliminar */}
         <div className={`text-end ${style.precioCardCarrito}`}>
-          <button className="btn btn-sm text-danger"><i className="bi bi-trash"></i></button>
+          <button className="btn btn-sm text-danger" onClick={borrarElemento}><i className="bi bi-trash"></i></button>
           <p>${producto.precio} c/u</p>
           <p><strong>${producto.precio}</strong></p>
         </div>

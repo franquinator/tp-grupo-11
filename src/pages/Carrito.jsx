@@ -2,9 +2,10 @@ import React from "react";
 import style from './Carrito.module.css'
 import ButtonLink from "../components/ButtonLink.jsx";
 import CardCarrito from "../components/Card/CardCarrito.jsx";
-import productos from '../../data/productos.json'
+import {obtenerCarrito,borrarCarrito} from "/src/manejoDeCarrito.js"
 
 export default function Carrito() {
+  const carrito = obtenerCarrito();
   return (
     <>
       <div id="Carrito sin productos">
@@ -18,7 +19,10 @@ export default function Carrito() {
           <ButtonLink pagina={"/carta"} texto={"Ver Carta"}/>
         </div>
       </div>
-      <CardCarrito producto={productos[1]}></CardCarrito>
+      {/* <CardCarrito producto={carrito[0]}/>; */}
+      {carrito.map((p) => (<CardCarrito key={p.id} producto={p}/>))}
+      <button onClick={borrarCarrito}>borrar carrito</button>
+      {/* <CardCarrito producto={carrito[1]}></CardCarrito> */}
     </>
   );
 }
