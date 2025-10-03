@@ -33,7 +33,7 @@ export default function Contacto() {
           />
           <Card
             titulo={"Horarios"}
-            icono={"src/assets/telefono.png"}
+            icono={"src/assets/horarios.png"}
             texto={"Lun - Sab: 7:00AM - 10:00PM"}
           />
         </div>
