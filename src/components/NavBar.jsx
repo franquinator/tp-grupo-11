@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 
 function NavBar() {
+  const [open, setOpen] = useState(false);
   return (
     <nav className={`${style.nav} fixed-top bg-light`}>
       <div className="divIzquierdo">
@@ -10,10 +11,13 @@ function NavBar() {
           className="bi bi-cup-hot" /* cuando pongamos modo oscuro se usa este: <i class="bi bi-cup-hot-fill"></i> */
           style={{ fontSize: "2rem", color: "black" }}
         ></i>
-
         <span>Luna & Granos Cafe</span>
       </div>
-      <ul className="derecha">
+      <button className={style.hamburger} onClick={() => setOpen(!open)}>
+        ☰
+      </button>
+
+      <ul className={`${style.menu} ${open ? style.active : ""} derecha`}>
         <li>
           <Link className="btn" to="/">Inicio</Link>
         </li>
