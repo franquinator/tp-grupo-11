@@ -28,7 +28,7 @@ export default function Contacto() {
           />
           <Card
             titulo={"Email"}
-            icono={"src/assets/telefono.png"}
+            icono={"src/assets/email.png"}
             texto={"lunaygranos@gmail.com"}
           />
           <Card
