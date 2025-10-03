@@ -5,7 +5,7 @@ import CardProducto from "./Card/CardProducto";
 export default function Buscador({ setSearch }) {
   return (
     <div className="d-flex justify-content-center mt-3">
-      <div class={`input-group ${style.barraBuscador}`}>
+      <div className={`input-group ${style.barraBuscador}`}>
         <span
           className="input-group-text bg-transparent border-0"
           id="visible-addon"

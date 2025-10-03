@@ -35,9 +35,9 @@ export default function CardCarrito({ producto }) {
           <p>{producto.descripcion}</p>
 
           <div className={style.contadorCarrito}>
-            <button  className={`btn btn-sm ${cantidad === 1 ? "btn-smbtn-outline-secondary" : "btn-outline-secondary"} `} onClick={disminuirCantidadProducto}>-</button>
+            <button  className={`btn btn-sm ${cantidad === 1 ? "btn btn-outline-secondary disabled" : "btn-outline-secondary"} `} onClick={disminuirCantidadProducto}>-</button>
             <span>{cantidad}</span>
-            <button className="btn btn-sm btn-outline-secondary" onClick={() => {setCantidad(cantidad +1);agregarAlCarrito(producto)}}>+</button>
+            <button className="btn btn-sm btn-outline-secondary" onClick={() => {setCantidad(cantidad + 1);agregarAlCarrito(producto)}}>+</button>
           </div>
         </div>
 

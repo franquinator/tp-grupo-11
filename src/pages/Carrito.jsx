@@ -8,6 +8,8 @@ export default function Carrito() {
   const carrito = obtenerCarrito();
   return (
     <>
+    <div>
+      { carrito.length === 0 ? (
       <div id="Carrito sin productos">
         <div className={`d-flex justify-content-center align-items-center ${style.divLogoCompra}`}>
           <i className={`bi bi-bag-plus ${style.logoCompra}`}></i>
@@ -19,10 +21,18 @@ export default function Carrito() {
           <ButtonLink pagina={"/carta"} texto={"Ver Carta"}/>
         </div>
       </div>
-      {/* <CardCarrito producto={carrito[0]}/>; */}
-      {carrito.map((p) => (<CardCarrito key={p.id} producto={p}/>))}
-      <button onClick={borrarCarrito}>borrar carrito</button>
-      {/* <CardCarrito producto={carrito[1]}></CardCarrito> */}
+      
+    
+      ) : (
+      <div>
+        {carrito.map((p) => (<CardCarrito key={p.id} producto={p}/>))}
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={borrarCarrito}>Vaciar Carrito</button>
+        </div>
+      </div>
+      )}
+
+    </div>
     </>
   );
 }
