@@ -10,7 +10,7 @@ export default function Buscador({ setSearch }) {
           className="input-group-text bg-transparent border-0"
           id="visible-addon"
         >
-          <i class="bi bi-search" />
+          <i className="bi bi-search" />
         </span>
         <input
           type="text"

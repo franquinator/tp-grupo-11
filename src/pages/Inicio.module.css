@@ -53,9 +53,8 @@
 .TercerSeccion{
     display: flex;
     align-items: center;
-    background-color: beige;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(43, 43, 43);
     color: white;
 }
 .TercerSeccion div{

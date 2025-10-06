@@ -1,5 +1,5 @@
 export function agregarAlCarrito(producto) {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let carrito = obtenerCarrito()
 
   const index = carrito.findIndex(item => item.id === producto.id);
 
@@ -14,7 +14,7 @@ export function agregarAlCarrito(producto) {
 }
 
 export function disminuirCantidad(producto) {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let carrito = obtenerCarrito()
   const index = carrito.findIndex(item => item.id === producto.id);
 
   if (index < 0) return carrito;
@@ -29,23 +29,20 @@ export function disminuirCantidad(producto) {
 }
 
 export function borrarDelCarrito(producto) {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let carrito = obtenerCarrito();
   carrito = carrito.filter(item => item.id !== producto.id);
-
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  return carrito;
 }
 
 export function borrarCarrito() {
   localStorage.setItem("carrito", JSON.stringify([]));
-  return [];
 }
 
 export function obtenerCarrito() {
   try {
-    return JSON.parse(localStorage.getItem("carrito")) || [];
-  } catch (e) {
-    console.error("Error al parsear el carrito:", e);
+    return JSON.parse(localStorage.getItem("carrito"));
+  } 
+  catch{
     return [];
   }
 }
