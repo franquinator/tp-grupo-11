@@ -1,22 +1,8 @@
-import React, { useState } from 'react'
-import style from './CardCarrito.module.css'
-import {agregarAlCarrito,borrarDelCarrito, disminuirCantidad} from "/src/manejoDeCarrito.js"
+import React from 'react';
+import style from './CardCarrito.module.css';
 
-export default function CardCarrito({ producto }) {
-  const [cantidad, setCantidad] = useState(producto.cantidad);
-  const esBotonActivado = () => {cantidad === 1 ? "true" : "false"}
-  const disminuirCantidadProducto = () =>{
-    if(cantidad > 1){
-      setCantidad(cantidad - 1);
-      disminuirCantidad(producto);
-    }
-  }
-  const borrarElemento = () =>{
-    borrarDelCarrito(producto);
-  }
-  //const cantidad = producto.cantidad;
+export default function CardCarrito({ producto, onAumentar, onDisminuir, onEliminar }) {
   return (
-    <>
     <div className={`card d-flex ${style.cardPrincipal}`}>
       <div className="card-body d-flex align-items-center">
 
@@ -35,20 +21,31 @@ export default function CardCarrito({ producto }) {
           <p>{producto.descripcion}</p>
 
           <div className={style.contadorCarrito}>
-            <button  className={`btn btn-sm ${cantidad === 1 ? "btn btn-outline-secondary disabled" : "btn-outline-secondary"} `} onClick={disminuirCantidadProducto}>-</button>
-            <span>{cantidad}</span>
-            <button className="btn btn-sm btn-outline-secondary" onClick={() => {setCantidad(cantidad + 1);agregarAlCarrito(producto)}}>+</button>
+            <button
+              className={`btn btn-sm ${producto.cantidad === 1 ? "btn btn-outline-secondary disabled" : "btn-outline-secondary"}`}
+              onClick={onDisminuir}
+            >
+              -
+            </button>
+            <span>{producto.cantidad}</span>
+            <button
+              className="btn btn-sm btn-outline-secondary"
+              onClick={onAumentar}
+            >
+              +
+            </button>
           </div>
         </div>
 
         {/* Precio y eliminar */}
         <div className={`text-end ${style.precioCardCarrito}`}>
-          <button className="btn btn-sm text-danger" onClick={borrarElemento}><i className="bi bi-trash"></i></button>
+          <button className="btn btn-sm text-danger" onClick={onEliminar}>
+            <i className="bi bi-trash"></i>
+          </button>
           <p>${producto.precio} c/u</p>
-          <p><strong>${producto.precio * cantidad}</strong></p>
+          <p><strong>${producto.precio * producto.cantidad}</strong></p>
         </div>
       </div>
     </div>
-    </>
-  )
+  );
 }
