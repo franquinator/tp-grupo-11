@@ -10,27 +10,27 @@ export default function Carrito() {
 
   const total = carrito.reduce((sum, prod) => sum + prod.precio * prod.cantidad, 0);
 
-  const handleAumentar = (producto) => {
+  const Aumentar = (producto) => {
     agregarAlCarrito(producto);
     setCarrito(obtenerCarrito());
   };
 
-  const handleDisminuir = (producto) => {
+  const Disminuir = (producto) => {
     disminuirCantidad(producto);
     setCarrito(obtenerCarrito());
   };
 
-  const handleEliminar = (producto) => {
+  const Eliminar = (producto) => {
     borrarDelCarrito(producto);
     setCarrito(obtenerCarrito());
   };
 
-  const handleVaciar = () => {
+  const Vaciar = () => {
     borrarCarrito();
     setCarrito([]);
   };
 
-  const handleFinalizarCompra = () => {
+  const FinalizarCompra = () => {
     borrarCarrito();
     setCarrito([]);
     setCompraFinalizada(true);
@@ -67,9 +67,9 @@ export default function Carrito() {
             <CardCarrito
               key={p.id}
               producto={p}
-              onAumentar={() => handleAumentar(p)}
-              onDisminuir={() => handleDisminuir(p)}
-              onEliminar={() => handleEliminar(p)}
+              onAumentar={() => Aumentar(p)}
+              onDisminuir={() => Disminuir(p)}
+              onEliminar={() => Eliminar(p)}
             />
           ))}
 
@@ -78,10 +78,10 @@ export default function Carrito() {
           </div>
 
           <div className="d-grid gap-2 col-6 mx-auto mt-3">
-            <button className={`btn btn-success`} onClick={handleFinalizarCompra}>
+            <button className={`btn btn-success`} onClick={FinalizarCompra}>
               Finalizar Compra
             </button>
-            <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={handleVaciar}>
+            <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={Vaciar}>
               Vaciar Carrito
             </button>
           </div>

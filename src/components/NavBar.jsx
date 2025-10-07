@@ -8,10 +8,10 @@ function NavBar() {
     <nav className={`${style.nav} fixed-top bg-light`}>
       <div className="divIzquierdo">
         <i
-          className="bi bi-cup-hot" /* cuando pongamos modo oscuro se usa este: <i class="bi bi-cup-hot-fill"></i> */
+          className="bi bi-cup-hot" 
           style={{ fontSize: "2rem", color: "black" }}
         ></i>
-        <span>Luna & Granos Cafe</span>
+        <span>Luna & Granos Café</span>
       </div>
       <button className={style.hamburger} onClick={() => setOpen(!open)}>
         ☰
