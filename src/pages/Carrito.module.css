@@ -54,8 +54,7 @@
   padding: 25px 20px;
   max-width: 320px;
   margin-right: 40px;
-  margin-left: -20px;
-  margin-top: 15px;
+  margin-top: 20px;
   height: fit-content;
 }
 
@@ -65,11 +64,10 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 850px) {
   .cardPedido {
     max-width: 100%;
     margin: 20px 40px 0 40px;
-    
   }
 
   .btnFinalizarCompra {
