@@ -63,30 +63,68 @@ export default function Carrito() {
           </div>
         </div>
       ) : (
-        <div>
-          {carrito.map((p) => (
-            <CardCarrito
+      <>
+
+        <div className={`d-flex justify-content-center ${style.continuarComprando}`}>
+          <div className={`d-flex flex-column ${style.divTuCarrito}`}>
+            <h3>Tu Carrito</h3>
+            <p>Elige nuestros mejores productos</p>
+            <ButtonLink pagina="/carta" texto="Continuar Comprando" />
+          </div>
+        </div>
+        
+        <div className={`d-flex flex-wrap`}> 
+          <div className="p-2 flex-fill">
+
+            {carrito.map((p) => (
+              <CardCarrito
               key={p.id}
               producto={p}
               onAumentar={() => Aumentar(p)}
               onDisminuir={() => Disminuir(p)}
               onEliminar={() => Eliminar(p)}
-            />
-          ))}
+              />
+            ))}
 
-          <div className="text-center mt-3">
-            <h4>Total: ${total}</h4>
+            <div className="d-grid gap-2 col-6 mx-auto mt-3">
+              <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={Vaciar}>
+                Vaciar Carrito
+              </button>
+            </div>
+
           </div>
 
-          <div className="d-grid gap-2 col-6 mx-auto mt-3">
-            <button className={`btn btn-success`} onClick={FinalizarCompra}>
-              Finalizar Compra
-            </button>
-            <button className={`btn btn-outline-danger ${style.btnVaciarCarrito}`} onClick={Vaciar}>
-              Vaciar Carrito
-            </button>
+          <div className={`${style.cardPedido} p-4 flex-fill`}>
+            <div className="text-center mt-3">
+              <div className={`d-flex justify-content-start ${style.tituloResumen}`}>
+                <p>Resumen del Pedido</p>
+              </div>
+              {carrito.map((p) => (
+                <div className={`d-flex justify-content-between ${style.productosPedido}`}> 
+                  <p>{p.nombre} x {p.cantidad}</p>
+                  <p>${p.precio * p.cantidad}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className={`${style.totalPedido}`}>
+              <div className="d-flex justify-content-between">
+                <p>Total:</p>
+                <p>${total}</p>
+              </div>
+              <div className="d-grid gap-2 col-6 mx-auto mt-3">
+                <button className={`btn btn-dark ${style.btnFinalizarCompra}`} onClick={FinalizarCompra}>
+                  Finalizar Compra
+                </button>
+              </div>
+            </div>
           </div>
+          
+            
+          
         </div>
+      </>
+        
       )
       }
     </div >

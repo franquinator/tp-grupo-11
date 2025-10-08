@@ -1,3 +1,11 @@
+.continuarComprando{
+    margin: 25px 0 25px 0;
+}
+
+.divTuCarrito p{
+    color: rgba(0, 0, 0, 0.664);
+}
+
 .divLogoCompra{
     padding-top: 25px;
 }
@@ -10,4 +18,61 @@
 .btnVaciarCarrito{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.btnFinalizarCompra{
+    white-space: nowrap;
+    width: 100%;
+}
+
+.tituloResumen{
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+.productosPedido p{
+    margin: 2px 0;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 10px 10px 5px 5px;
+    color: rgb(0, 0, 0);
+}
+
+.totalPedido{
+    margin-top: 10px;
+    border-top: 1px solid rgba(211, 211, 211, 0.582);
+}
+
+.totalPedido div{
+    margin-top: 10px;
+}
+
+.cardPedido {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 25px 20px;
+  max-width: 320px;
+  margin-right: 40px;
+  margin-left: -20px;
+  margin-top: 15px;
+  height: fit-content;
+}
+
+
+.cardPedido p {
+  margin: 0;
+}
+
+
+@media (max-width: 1000px) {
+  .cardPedido {
+    max-width: 100%;
+    margin: 20px 40px 0 40px;
+    
+  }
+
+  .btnFinalizarCompra {
+    white-space: wrap;
+  }
 }

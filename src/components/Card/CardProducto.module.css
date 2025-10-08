@@ -43,6 +43,10 @@
     max-width: 700px;
 }
 
+.btnFinalizarCompra{
+    white-space: nowrap;
+}
+
 .textCard{
     text-align: left;
 }
