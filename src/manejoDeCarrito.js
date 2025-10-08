@@ -39,10 +39,11 @@ export function borrarCarrito() {
 }
 
 export function obtenerCarrito() {
-  try {
-    return JSON.parse(localStorage.getItem("carrito"));
-  } 
-  catch{
+  let carrito = localStorage.getItem("carrito")
+  if(carrito == null || carrito == ''){
     return [];
+  }
+  else{
+    return JSON.parse(localStorage.getItem("carrito"));
   }
 }

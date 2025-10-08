@@ -31,6 +31,7 @@ export default function Carrito() {
   };
 
   const FinalizarCompra = () => {
+    alert("compra realizada con exito")
     borrarCarrito();
     setCarrito([]);
     setCompraFinalizada(true);
