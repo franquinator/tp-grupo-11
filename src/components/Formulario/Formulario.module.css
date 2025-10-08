@@ -73,3 +73,38 @@
   color: #666;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .formRow {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  .formCard {
+    max-width: 95%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .inputForm,
+  .textareaForm {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .btnEnviar {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .formCard h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .nota {
+    text-align: center;
+    font-size: 12px;
+  }
+}
