@@ -8,6 +8,7 @@
 
 .section {
   margin-bottom: 4rem;
+  margin-right: 0.1rem;
   scroll-margin-top: 80px; /* evita que el navbar fijo tape títulos */
 }
 
