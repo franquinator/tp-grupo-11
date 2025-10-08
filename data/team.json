@@ -3,7 +3,7 @@
     "name": "Facundo Torres",
     "role": "Fundador y Maestro Tostador",
     "description": "Con más de 15 años de experiencia en el mundo del café, Facundo fundó Luna & Granos con la visión de crear un espacio único.",
-    "imagen": ""
+    "imagen": "../src/assets/imagenes/facundoTorres.jpg"
   },
   {
     "name": "Franco Iannone",
