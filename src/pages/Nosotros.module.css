@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   padding: 2rem 1rem;
-  padding-top: calc(2rem + 20px); /* ajusta según altura del navbar */
+  padding-top: calc(2rem + 20px); 
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -9,7 +9,7 @@
 .section {
   margin-bottom: 4rem;
   margin-right: 0.1rem;
-  scroll-margin-top: 80px; /* evita que el navbar fijo tape títulos */
+  scroll-margin-top: 80px; 
 }
 
 .title {
