@@ -4,6 +4,7 @@ import style from "./NavBar.module.css";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const cerrarNav = () => setOpen(false);
   return (
     <nav className={`${style.nav} fixed-top bg-light`}>
       <div className="divIzquierdo">
@@ -19,19 +20,19 @@ function NavBar() {
 
       <ul className={`${style.menu} ${open ? style.active : ""} derecha`}>
         <li>
-          <Link className="btn" to="/">Inicio</Link>
+          <Link className="btn" to="/" onClick={cerrarNav}>Inicio</Link>
         </li>
         <li>
-          <Link className="btn" to="/nosotros">Nosotros</Link>
+          <Link className="btn" to="/nosotros" onClick={cerrarNav}>Nosotros</Link>
         </li>
         <li>
-          <Link className="btn" to="/carta">Carta</Link>
+          <Link className="btn" to="/carta" onClick={cerrarNav}>Carta</Link>
         </li>
         <li>
-          <Link className="btn" to="/carrito">Carrito</Link>
+          <Link className="btn" to="/carrito" onClick={cerrarNav}>Carrito</Link>
         </li>
         <li>
-          <Link className="btn" to="/contacto">Contacto</Link>
+          <Link className="btn" to="/contacto" onClick={cerrarNav}>Contacto</Link>
         </li>
         <li>
           <button className="btn">
