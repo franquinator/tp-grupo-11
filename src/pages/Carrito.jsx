@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import style from './Carrito.module.css'
 import ButtonLink from "../components/ButtonLink.jsx";
 import CardCarrito from "../components/Card/CardCarrito.jsx";
@@ -6,6 +6,13 @@ import { obtenerCarrito, borrarCarrito, agregarAlCarrito, disminuirCantidad, bor
 import { motion } from "framer-motion";
 
 export default function Carrito() {
+  //esto sirve para que evitar que suba arriba de todo cada que se usa un useState
+  const [renderizo, setRenderizo] = useState(false);
+  if(!renderizo){
+    setRenderizo(true);
+    window.scrollTo(0, 0);
+  }
+
   const [carrito, setCarrito] = useState(obtenerCarrito());
   const [compraFinalizada, setCompraFinalizada] = useState(false);
 
@@ -37,8 +44,6 @@ export default function Carrito() {
     setCarrito([]);
     setCompraFinalizada(true);
   };
-
-  window.scrollTo(0, 0);
 
   if (compraFinalizada) {
     return (
