@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Formulario.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Formulario() {
@@ -10,18 +10,29 @@ export default function Formulario() {
     fecha: "",
     hora: "",
     comentario: ""
-  })
+  });
 
-  const [error, setError] = useState("")
-  const [enviado, setEnviado] = useState(false)
+  const [error, setError] = useState("");
+  const [enviado, setEnviado] = useState(false);
+
+  useEffect(() => {
+    if (error || enviado) {
+      const timer = setTimeout(() => {
+        setError("");
+        setEnviado(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [error, enviado]);
 
   const manejarCambios = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormulario({
       ...formulario,
       [name]: value
-    })
-  }
+    });
+  };
 
   const manejarSubmit = (e) => {
     e.preventDefault();
@@ -47,10 +58,20 @@ export default function Formulario() {
       setError("El comentario debe tener al menos 20 caracteres.");
       return;
     }
-    setError("")
-    setEnviado(true)
-    console.log("Datos enviados:", formulario)
-  }
+
+    setError("");
+    setEnviado(true);
+
+    setFormulario({
+      nombre: "",
+      email: "",
+      fecha: "",
+      hora: "",
+      comentario: ""
+    });
+
+    console.log("Datos enviados:", formulario);
+  };
 
   return (
     <div className={style.formCard}>
@@ -59,30 +80,59 @@ export default function Formulario() {
         <div className={style.formRow}>
           <div className={style.formGroup}>
             <label>Nombre completo *</label>
-            <input className={style.inputForm} name="nombre" value={formulario.nombre} onChange={manejarCambios} type="text" placeholder="Tu nombre" />
+            <input
+              className={style.inputForm}
+              name="nombre"
+              value={formulario.nombre}
+              onChange={manejarCambios}
+              type="text"
+              placeholder="Tu nombre"
+            />
           </div>
           <div className={style.formGroup}>
             <label>Email *</label>
-            <input className={style.inputForm} name="email" value={formulario.email} onChange={manejarCambios} type="email" placeholder="tu@email.com" />
+            <input
+              className={style.inputForm}
+              name="email"
+              value={formulario.email}
+              onChange={manejarCambios}
+              type="email"
+              placeholder="tu@email.com"
+            />
           </div>
         </div>
 
         <div className={style.formRow}>
           <div className={style.formGroup}>
             <label>Fecha de la reserva *</label>
-            <input className={style.inputForm} name="fecha" value={formulario.fecha} onChange={manejarCambios} type="date" />
+            <input
+              className={style.inputForm}
+              name="fecha"
+              value={formulario.fecha}
+              onChange={manejarCambios}
+              type="date"
+            />
           </div>
           <div className={style.formGroup}>
             <label>Hora de la reserva *</label>
-            <input className={style.inputForm} name="hora" value={formulario.hora} onChange={manejarCambios} type="time" />
+            <input
+              className={style.inputForm}
+              name="hora"
+              value={formulario.hora}
+              onChange={manejarCambios}
+              type="time"
+            />
           </div>
         </div>
 
         <div className={`${style.formGroup} ${style.fullWidth}`}>
           <label>Mensaje / Comentarios *</label>
-          <textarea className={style.textareaForm} name="comentario" value={formulario.comentario} onChange={manejarCambios}
+          <textarea
+            className={style.textareaForm}
+            name="comentario"
+            value={formulario.comentario}
+            onChange={manejarCambios}
             placeholder="Cuéntanos sobre tu reserva: número de personas, ocasión especial, preferencias alimentarias, etc."
-
           />
         </div>
 
@@ -91,9 +141,9 @@ export default function Formulario() {
         </button>
 
         <p className={style.nota}>
-          * Campos obligatorios. Te confirmaremos tu reserva por email o
-          teléfono.
+          * Campos obligatorios. Te confirmaremos tu reserva por email o teléfono.
         </p>
+
         {error && <p style={{ color: "red" }}>{error}</p>}
         {enviado && <p style={{ color: "green" }}>¡Reserva enviada correctamente!</p>}
       </form>
