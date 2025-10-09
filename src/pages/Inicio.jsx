@@ -22,9 +22,9 @@ export default function Inicio() {
       <h2>¿Por qué elegirnos?</h2>
       <p>En Luna & Granos Café nos apasiona ofrecer la mejor experiencia cafetera, combinando calidad, comodidad y un servicio excepcional.</p>
       <div className={style.FlexContainer}>
-        <Card titulo={"Café Premium"} icono={<i class="bi bi-cup-hot"/>} texto={"Granos seleccionados de las mejores fincas del mundo"}></Card>
-        <Card titulo={"Horarios Flexibles"} icono={<i class="bi bi-clock"></i>} texto={"Abierto todos los días de 7:00 AM a 10:00 PM"}></Card>
-        <Card titulo={"Ubicación Central"} icono={<i class="bi bi-geo-alt-fill"/>} texto={"Fácil acceso en el corazón de la ciudad"}></Card>
+        <Card titulo={"Café Premium"} icono={<i className="bi bi-cup-hot"/>} texto={"Granos seleccionados de las mejores fincas del mundo"}></Card>
+        <Card titulo={"Horarios Flexibles"} icono={<i className="bi bi-clock"></i>} texto={"Abierto todos los días de 7:00 AM a 10:00 PM"}></Card>
+        <Card titulo={"Ubicación Central"} icono={<i className="bi bi-geo-alt-fill"/>} texto={"Fácil acceso en el corazón de la ciudad"}></Card>
       </div>
     </section>
     <section className={style.TercerSeccion}>
