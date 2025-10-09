@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 
 export default function Formulario() {
+  const hoy = new Date(Date.now()).toISOString().slice(0,10);
   const [formulario, setFormulario] = useState({
     nombre: "",
     email: "",
@@ -38,6 +39,7 @@ export default function Formulario() {
     e.preventDefault();
 
     const { nombre, email, fecha, hora, comentario } = formulario;
+    let dia = new Date(fecha);
 
     if (!nombre || !email || !fecha || !hora || !comentario) {
       setError("Por favor completá todos los campos obligatorios.");
@@ -56,6 +58,11 @@ export default function Formulario() {
 
     if (comentario.trim().length < 10) {
       setError("El comentario debe tener al menos 10 caracteres.");
+      return;
+    }
+
+    if (dia.getDay() == 6) {
+      setError("Lo siento no trabajamos los domingos");
       return;
     }
 
@@ -111,6 +118,7 @@ export default function Formulario() {
               value={formulario.fecha}
               onChange={manejarCambios}
               type="date"
+              min= {hoy}
             />
           </div>
           <div className={style.formGroup}>
@@ -121,6 +129,8 @@ export default function Formulario() {
               value={formulario.hora}
               onChange={manejarCambios}
               type="time"
+              min="07:00"
+              max="22:00"
             />
           </div>
         </div>
