@@ -15,7 +15,7 @@
     "name": "Facundo Chavez",
     "role": "Barista Principal",
     "description": "Experto en técnicas de extracción y latte art, Facundo se asegura de que cada bebida sea una obra de arte.",
-    "imagen": ""
+    "imagen": "../src/assets/imagenes/FacundoChavez.jpg"
   },
   {
     "name": "Lucas Crusvar",
