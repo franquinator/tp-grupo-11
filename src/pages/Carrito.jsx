@@ -65,7 +65,7 @@ export default function Carrito() {
       ) : (
       <>
 
-        <div className={`d-flex justify-content-center ${style.continuarComprando}`}>
+        <div className={`d-flex  ${style.continuarComprando}`}>
           <div className={`d-flex flex-column ${style.divTuCarrito}`}>
             <h3>Tu Carrito</h3>
             <p>Elige nuestros mejores productos</p>

@@ -4,7 +4,7 @@
 }
 
 .continuarComprando{
-    margin: 25px 0 25px 0;
+    margin: 25px 0 25px 190px;
 }
 
 .divLogoCompra{
@@ -71,5 +71,10 @@
 
   .btnFinalizarCompra {
     white-space: wrap;
+  }
+
+  .continuarComprando{
+    margin-left: auto;
+    justify-content: center;
   }
 }
