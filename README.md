@@ -1,6 +1,6 @@
 <h1 align="center">☕ Cafetería React - TP Grupo 11</h1>
 <h3 align="center">Trabajo Práctico - Primer Parcial</h3>
-<img src="./src/assets/Inicio.png" width="120">
+<img src="./src/assets/Inicio.png">
 
 ---
 
@@ -20,9 +20,11 @@ La aplicación fue creada con **React** y **Bootstrap**, y permite navegar entre
 ## Instrucciones para correr en local
 
 1. **Clonar el repositorio**
-   ```
-   git clone https://github.com/franquinator/tp-grupo-11.git
-   ```
+
+```
+git clone https://github.com/franquinator/tp-grupo-11.git
+```
+
 2. **Ingresar a la carpeta del repositorio**
 
 ```
