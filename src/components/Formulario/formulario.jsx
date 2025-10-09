@@ -1,30 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from "./Formulario.module.css";
 import { useState } from "react";
-import { p } from "framer-motion/client";
 
 
 export default function Formulario() {
   const [formulario, setFormulario] = useState({
     nombre: "",
-    email:"",
-    fecha:"",
+    email: "",
+    fecha: "",
     hora: "",
-    comentario:""
+    comentario: ""
   })
 
   const [error, setError] = useState("")
   const [enviado, setEnviado] = useState(false)
 
-  const manejarCambios = (e) =>{
-    const {name,value} = e.target
+  const manejarCambios = (e) => {
+    const { name, value } = e.target
     setFormulario({
       ...formulario,
       [name]: value
-    })  
+    })
   }
 
-  const manejarSubmit = (e) =>{
+  const manejarSubmit = (e) => {
     e.preventDefault();
 
     const { nombre, email, fecha, hora, comentario } = formulario;
@@ -34,17 +33,9 @@ export default function Formulario() {
       return;
     }
 
-    for (let i = 0; i < nombre.length; i++) {
-      const char = nombre[i];
-      const esLetra = 
-        (char >= "A" && char <= "Z") || 
-        (char >= "a" && char <= "z") || 
-        char === " " || 
-        "áéíóúÁÉÍÓÚñÑ".includes(char);
-      if (!esLetra) {
-        setError("El nombre solo puede contener letras y espacios.");
-        return;
-      }
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombre)) {
+      setError("El nombre solo puede contener letras y espacios.");
+      return;
     }
 
     if (!email.includes("@") || !email.includes(".")) {
@@ -68,7 +59,7 @@ export default function Formulario() {
         <div className={style.formRow}>
           <div className={style.formGroup}>
             <label>Nombre completo *</label>
-            <input className={style.inputForm} name="nombre" value={formulario.nombre} onChange={manejarCambios} type="text" placeholder="Tu nombre"  />
+            <input className={style.inputForm} name="nombre" value={formulario.nombre} onChange={manejarCambios} type="text" placeholder="Tu nombre" />
           </div>
           <div className={style.formGroup}>
             <label>Email *</label>
@@ -91,7 +82,7 @@ export default function Formulario() {
           <label>Mensaje / Comentarios *</label>
           <textarea className={style.textareaForm} name="comentario" value={formulario.comentario} onChange={manejarCambios}
             placeholder="Cuéntanos sobre tu reserva: número de personas, ocasión especial, preferencias alimentarias, etc."
-            
+
           />
         </div>
 
@@ -103,7 +94,7 @@ export default function Formulario() {
           * Campos obligatorios. Te confirmaremos tu reserva por email o
           teléfono.
         </p>
-        {error && <p style={{color:"red"}}>{error}</p>}
+        {error && <p style={{ color: "red" }}>{error}</p>}
         {enviado && <p style={{ color: "green" }}>¡Reserva enviada correctamente!</p>}
       </form>
     </div>
