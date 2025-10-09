@@ -2,6 +2,7 @@ import productos from "../../data/productos.json";
 import CardProducto from "../components/Card/CardProducto";
 import Buscador from "../components/Buscador";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Carta() {
   const [search, setSearch] = useState("");
@@ -28,7 +29,15 @@ export default function Carta() {
       <div className="container d-flex p-2 flex-wrap justify-content-evenly">
         {productosFiltrados.length > 0 ? (
           productosFiltrados.map((p) => (
-            <CardProducto key={p.id} producto={p} />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              key={p.id}>
+
+              <CardProducto key={p.id} producto={p} />
+            
+            </motion.div>
           ))
         ) : (
           <p className="text-center text-muted mt-4">

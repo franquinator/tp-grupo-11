@@ -3,6 +3,7 @@ import style from './Carrito.module.css'
 import ButtonLink from "../components/ButtonLink.jsx";
 import CardCarrito from "../components/Card/CardCarrito.jsx";
 import { obtenerCarrito, borrarCarrito, agregarAlCarrito, disminuirCantidad, borrarDelCarrito } from "/src/manejoDeCarrito.js";
+import { motion } from "framer-motion";
 
 export default function Carrito() {
   const [carrito, setCarrito] = useState(obtenerCarrito());
@@ -74,7 +75,11 @@ export default function Carrito() {
         </div>
         
         <div className={`d-flex flex-wrap`}> 
-          <div className={`p-2 flex-fill `}>
+          <motion.div 
+          initial={{ x: -100, opacity: 0 }} 
+          animate={{ x: 0, opacity: 1 }} 
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className={`p-2 flex-fill `}>
 
             {carrito.map((p) => (
               <CardCarrito
@@ -92,7 +97,7 @@ export default function Carrito() {
               </button>
             </div>
 
-          </div>
+          </motion.div>
 
           <div className={`${style.cardPedido} p-4 flex-fill`}>
             <div className="text-center mt-3">

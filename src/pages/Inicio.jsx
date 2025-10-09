@@ -1,10 +1,8 @@
 import Card from "../components/Card/Card";
 import ButtonLink from "../components/ButtonLink.jsx";
 import style from "./Inicio.module.css"
-import useTema from '../tema.js'
 
 export default function Inicio() {
-  const {tema} = useTema()
   return <>
     <section className={style.PrimerSeccion}>
       <div className={style.TextoPrimerSeccion}>
