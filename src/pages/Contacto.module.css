@@ -37,7 +37,7 @@
   padding: 2%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 930px) {
   .contenedorFormularios {
     flex-direction: column;
     align-items: center;
