@@ -6,14 +6,14 @@ import useTema from "../tema.js"
 function NavBar() {
   const [open, setOpen] = useState(false);
   const cerrarNav = () => setOpen(false);
-  
-  const {tema, btnTema} = useTema()
-  
+
+  const { tema, btnTema } = useTema()
+
   return (
     <nav className={`${style.nav} fixed-top`}>
       <div className="divIzquierdo">
         <i
-          className={`bi bi-cup-hot ${tema === "claro" ? "" : "text-light"}`} 
+          className={`bi bi-cup-hot ${tema === "claro" ? "" : "text-light"}`}
           style={{ fontSize: "2rem", color: "black" }}
         />
         <span>Luna & Granos Café</span>
@@ -39,8 +39,8 @@ function NavBar() {
           <Link className={`btn ${tema === "claro" ? "" : "btn-dark"}`} to="/contacto" onClick={cerrarNav}>Contacto</Link>
         </li>
         <li>
-          <button className={`btn ${tema === "claro" ? "" : "btn-dark"}`} onClick={btnTema}>
-            {tema === "claro" ? <i className="bi bi-moon-fill"/> : <i className="bi bi-sun"/>}
+          <button className={`btn ${tema === "claro" ? "" : "btn-dark"}`} onClick={() => {btnTema();setTimeout(cerrarNav,400)}}>
+            {tema === "claro" ? <i className="bi bi-moon-fill" /> : <i className="bi bi-sun" />}
           </button>
         </li>
       </ul>
