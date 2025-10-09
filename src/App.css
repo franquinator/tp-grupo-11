@@ -3,3 +3,8 @@
   padding: 0px;
   font-family: system-ui,sans-serif,Arial, Helvetica;
 }
+
+.color{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}

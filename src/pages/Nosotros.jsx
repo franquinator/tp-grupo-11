@@ -4,7 +4,7 @@ import { Heart, Users, Leaf, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from "./Nosotros.module.css";
 import ImageWithFallback from "../components/ImageWithFallback";
-
+import useTema from '../tema.js'
 
 import valuesData from "../../data/values.json";
 import teamData from "../../data/team.json";
@@ -17,7 +17,9 @@ const icons = {
 };
 
 export default function Nosotros() {
+  const {tema} = useTema()
   return (
+    <div className={styles.general}>
     <div className={styles.container}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -56,7 +58,7 @@ export default function Nosotros() {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className={styles.card}
               >
-                <div className={styles.cardIcon}>
+                <div className={`${styles.cardIcon} ${tema === "claro" ? "" : "text-light"}`}>
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3>{value.title}</h3>
@@ -78,12 +80,12 @@ export default function Nosotros() {
             
             <div className="col-12 col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-3">Nuestra Misión</h2>
-              <p className="text-muted mb-3">
+              <p className={` mb-3`}>
                 En Luna & Granos Café, nuestra misión es ofrecer una experiencia café excepcional que vaya más allá
                 de una simple bebida. Queremos ser el lugar donde cada visita se convierta en un momento especial,
                 donde el sabor auténtico del café se combine con un servicio cálido y personalizado.
               </p>
-              <p className="text-muted">
+              <p className={``}>
                 Trabajamos incansablemente para apoyar a los productores de café locales, promoviendo prácticas
                 sostenibles y el desarrollo de comunidades cafeteras. Cada taza que servimos cuenta la historia
                 de granos cuidadosamente seleccionados y tostados con maestría.
@@ -137,6 +139,7 @@ export default function Nosotros() {
           className={styles.teamPhoto}
         />
       </motion.div>
+    </div>
     </div>
   );
 }

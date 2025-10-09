@@ -3,6 +3,10 @@
   margin: 10px auto;
 }
 
+.colorCard{
+    background-color: var(--color-fondo);
+}
+
 @media (max-width: 768px) {
   .cardPrincipal {
     max-width: 95%; /* ocupa casi toda la pantalla en celulares */
@@ -36,12 +40,14 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.2; 
+    color: var(--color-texto);
 }
 
 .textCardCarrito p{
     margin: 2px 0;
     font-size: 0.85rem;
     line-height: 1.2;
+    color: var(--color-texto);
 }
 
 .contadorCarrito {
@@ -59,6 +65,7 @@
     font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
+    color: var(--color-texto);
 }
 
 .precioCardCarrito p {
@@ -66,4 +73,5 @@
     font-size: 0.85rem;
     line-height: 1.2;
     text-align: right;
+    color: var(--color-texto);
 }

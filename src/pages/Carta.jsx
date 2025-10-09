@@ -15,7 +15,7 @@ export default function Carta() {
 
   /*Paso producto del array como parametro a cardProducto y arma la carta con los valores del objeto*/
   return (
-    <>
+    <div style={{backgroundColor: "var(--color-fondo)", color: "var(--color-texto)"}}>
       <h2 className="text-center x-auto p-3">Nuestra Carta</h2>
 
       <p className="text-center text-secondary">
@@ -36,6 +36,6 @@ export default function Carta() {
           </p>
         )}
       </div>
-    </>
+    </div>
   );
 }

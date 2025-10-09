@@ -18,22 +18,22 @@ export default function Contacto() {
         <div className={style.contenedorIzq}>
           <Card
             titulo={"Direccion"}
-            icono={"src/assets/geo.png"}
+            icono={<i class="bi bi-geo-alt-fill"></i>}
             texto={"Av corrientes 1234"}
           />
           <Card
             titulo={"Telefono"}
-            icono={"src/assets/telefono.png"}
+            icono={<i class="bi bi-telephone"></i>}
             texto={"4489-0135"}
           />
           <Card
             titulo={"Email"}
-            icono={"src/assets/email.png"}
+            icono={<i class="bi bi-envelope"></i>}
             texto={"lunaygranos@gmail.com"}
           />
           <Card
             titulo={"Horarios"}
-            icono={"src/assets/horarios.png"}
+            icono={<i class="bi bi-clock"></i>}
             texto={"Lun - Sab: 7:00AM - 10:00PM"}
           />
         </div>

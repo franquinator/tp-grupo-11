@@ -39,7 +39,7 @@ export default function Carrito() {
 
   if (compraFinalizada) {
     return (
-      <div className="text-center mt-5 mb-3">
+      <div className={`text-center mt-5 mb-3`}>
         <h2>🎉 ¡Muchas gracias por tu compra!</h2>
         <p>Tu pedido está siendo procesado.</p>
         <ButtonLink pagina="/carta" texto="Seguir comprando" />
@@ -48,7 +48,7 @@ export default function Carrito() {
   }
 
   return (
-    <div className="mb-3">
+    <div className={`mb-3 `}>
       {carrito.length === 0 ? (
         < div id="Carrito sin productos">
           <div className={`d-flex justify-content-center align-items-center ${style.divLogoCompra}`}>
@@ -74,7 +74,7 @@ export default function Carrito() {
         </div>
         
         <div className={`d-flex flex-wrap`}> 
-          <div className="p-2 flex-fill">
+          <div className={`p-2 flex-fill `}>
 
             {carrito.map((p) => (
               <CardCarrito
@@ -100,7 +100,7 @@ export default function Carrito() {
                 <p>Resumen del Pedido</p>
               </div>
               {carrito.map((p) => (
-                <div className={`d-flex justify-content-between ${style.productosPedido}`}> 
+                <div className={`d-flex justify-content-between ${style.productosPedido}`} key={p.id}> 
                   <p>{p.nombre} x {p.cantidad}</p>
                   <p>${p.precio * p.cantidad}</p>
                 </div>

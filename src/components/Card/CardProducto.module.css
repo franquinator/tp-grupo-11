@@ -5,6 +5,10 @@
     border-radius: 5px 5px 0 0;
 }
 
+.colorCard{
+    background-color: var(--color-fondo);
+}
+
 .imgCard {
     width: 100%;
     height: 100%;
@@ -49,6 +53,7 @@
 
 .textCard{
     text-align: left;
+    color: var(--color-texto);
 }
 
 .textDescripcion{

@@ -21,7 +21,6 @@
 .subtitle {
   text-align: center;
   margin-bottom: 3rem;
-  color: #555;
 }
 
 .heroImage{
@@ -49,7 +48,6 @@
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  background: #fff;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -87,8 +85,8 @@
 
 .card p {
   line-height: 1.5;
-  color: #555;
 }
+
 
 .teamPhoto {
   width: 100%;

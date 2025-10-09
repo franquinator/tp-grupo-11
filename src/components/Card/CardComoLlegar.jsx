@@ -4,7 +4,7 @@ import React from "react";
 export default function CardComoLlegar({ icono, texto }) {
   return (
     <div className={style.cardComoLlegar}>
-      <img src={icono} />
+      <i class="bi bi-geo-alt-fill"/>
       <p>{texto}</p>
     </div>
   );

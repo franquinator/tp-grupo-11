@@ -4,7 +4,7 @@ import style from './CardCarrito.module.css';
 export default function CardCarrito({ producto, onAumentar, onDisminuir, onEliminar }) {
   return (
     <div className={`card d-flex ${style.cardPrincipal}`}>
-      <div className="card-body d-flex align-items-center">
+      <div className={`card-body d-flex align-items-center ${style.colorCard}`}>
 
         {/* Imagen */}
         <div className={style.divImgCardCarrito}>

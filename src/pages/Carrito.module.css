@@ -1,9 +1,10 @@
-.continuarComprando{
-    margin: 25px 0 25px 0;
+.colorCarrito{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
-.divTuCarrito p{
-    color: rgba(0, 0, 0, 0.664);
+.continuarComprando{
+    margin: 25px 0 25px 0;
 }
 
 .divLogoCompra{
@@ -35,7 +36,6 @@
     font-size: 0.85rem;
     line-height: 1;
     padding: 10px 10px 5px 5px;
-    color: rgb(0, 0, 0);
 }
 
 .totalPedido{
@@ -48,8 +48,7 @@
 }
 
 .cardPedido {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(165, 160, 160, 0.603);
   border-radius: 12px;
   padding: 25px 20px;
   max-width: 320px;

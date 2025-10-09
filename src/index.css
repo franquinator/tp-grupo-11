@@ -1,3 +1,18 @@
+:root {
+  --color-fondo: #f7f7f7;
+  --color-texto: #1a1a1a;
+  --color-sectionInicio: beige;
+}
+
+[data-theme="oscuro"] {
+  --color-fondo: #121212;
+  --color-texto: #f7f7f7;
+  --color-sectionInicio:rgb(19, 27, 43);
+}
+
 body{
-    padding-top: 70px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 69px;
 }

@@ -13,7 +13,8 @@ function App() {
     <div className="d-flex flex-column min-vh-100">
       <NavBar />
       
-      <div className="flex-fill">
+      <div className={`flex-fill`} style={{backgroundColor: "var(--color-fondo)",
+    color: "var(--color-texto)"}}>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/nosotros" element={<Nosotros />} />
