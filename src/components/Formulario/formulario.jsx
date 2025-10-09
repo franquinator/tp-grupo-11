@@ -54,8 +54,8 @@ export default function Formulario() {
       return;
     }
 
-    if (comentario.trim().length < 20) {
-      setError("El comentario debe tener al menos 20 caracteres.");
+    if (comentario.trim().length < 10) {
+      setError("El comentario debe tener al menos 10 caracteres.");
       return;
     }
 
