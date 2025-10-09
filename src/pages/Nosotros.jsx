@@ -18,6 +18,7 @@ const icons = {
 
 export default function Nosotros() {
   const {tema} = useTema()
+  window.scrollTo(0, 0);
   return (
     <div className={styles.general}>
     <div className={styles.container}>

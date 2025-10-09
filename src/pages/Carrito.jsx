@@ -38,6 +38,8 @@ export default function Carrito() {
     setCompraFinalizada(true);
   };
 
+  window.scrollTo(0, 0);
+
   if (compraFinalizada) {
     return (
       <div className={`text-center mt-5 mb-3`}>

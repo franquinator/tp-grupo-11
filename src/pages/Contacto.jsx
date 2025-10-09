@@ -7,6 +7,7 @@ import Formulario from "../components/Formulario/formulario.jsx"; /*Funciona for
 import { motion } from "framer-motion";
 
 export default function Contacto() {
+  window.scrollTo(0, 0)
   return (
     <section>
       <h1 className={style.titulo}>Contacto y Reservas</h1>

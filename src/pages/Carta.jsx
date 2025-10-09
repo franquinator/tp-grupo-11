@@ -6,13 +6,14 @@ import { motion } from "framer-motion";
 
 export default function Carta() {
   const [search, setSearch] = useState("");
-
   const productosFiltrados = productos.filter(
     (p) =>
       p.nombre.toLowerCase().includes(search.toLowerCase()) ||
       p.descripcion.toLowerCase().includes(search.toLowerCase()) ||
       p.tipo.toLowerCase().includes(search.toLowerCase())
   );
+
+  window.scrollTo(0, 0);
 
   /*Paso producto del array como parametro a cardProducto y arma la carta con los valores del objeto*/
   return (

@@ -5,7 +5,7 @@ import useTema from "../tema.js"
 
 function NavBar() {
   const [open, setOpen] = useState(false);
-  const cerrarNav = () => {setOpen(false);window.scrollTo(0, 0)};
+  const cerrarNav = () => setOpen(false);
 
   const { tema, btnTema } = useTema()
 

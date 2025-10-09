@@ -3,6 +3,7 @@ import ButtonLink from "../components/ButtonLink.jsx";
 import style from "./Inicio.module.css"
 
 export default function Inicio() {
+  window.scrollTo(0, 0);
   return <>
     <section className={style.PrimerSeccion}>
       <div className={style.TextoPrimerSeccion}>
