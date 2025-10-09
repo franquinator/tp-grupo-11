@@ -1,4 +1,4 @@
-<h1 align="center">☕ Cafetería React - TP Grupo 11</h1>
+<h1 align="center">☕ Cafetería Luna & Granos Cafe ☕ - TP Grupo 11</h1>
 <h3 align="center">Trabajo Práctico - Primer Parcial</h3>
 <img src="./src/assets/Inicio.png">
 
